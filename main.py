@@ -142,6 +142,118 @@ while True:
                 print("Please choose version from menu!!!")
 
 
+    def play_games():
+        while True:
+            def guess_the_number():
+                while True:
+                    your_number = input("\nWelcome to 'guess the number' game!\n\tЕry to guess the number that I guessed "
+                                        "from 0 to 10\nFor exit write:Exit")
+                    num_1 = random.randint(0, 11)
+                    if num_1 == int(your_number):
+                        print("Сongratulations!!!! you have a good intuition")
+                    elif your_number == "Exit":
+                        break
+                    else:
+                        print("Нou were close try again")
+
+            def rock_paper_scissors():
+                print("Welcome to rock paper scissors")
+                your_count = 0
+                my_count = 0
+                while True:
+                    user = input("Please write rock, paper or scissors\nFor exit write: Exit\n")
+                    list_movements = ["rock", "paper", "scissors"]
+                    computer_choose = random.choice(list_movements)
+                    if user == "rock":
+                        if user == computer_choose:
+                            print("draw")
+                        elif computer_choose == "paper":
+                            my_count += 1
+                            print(f"I won, our account me {my_count} and your {your_count}")
+                        elif computer_choose == "scissors":
+                            your_count += 1
+                            print(f"You won, our account me {my_count} and your {your_count}")
+                        else:
+                            print("Please choose version from menu")
+
+                    if user == "paper":
+                        if user == computer_choose:
+                            print("draw")
+                        elif computer_choose == "scissors":
+                            my_count += 1
+                            print(f"I won, our account me {my_count} and your {your_count}")
+                        elif computer_choose == "rock":
+                            your_count += 1
+                            print(f"You won, our account me {my_count} and your {your_count}")
+                        else:
+                            print("Please choose version from menu")
+                    if user == "scissors":
+                        if user == computer_choose:
+                            print("draw")
+                        elif computer_choose == "rock":
+                            my_count += 1
+                            print(f"I won, our account me {my_count} and your {your_count}")
+                        elif computer_choose == "paper":
+                            your_count += 1
+                            print(f"You won, our account me {my_count} and your {your_count}")
+                        else:
+                            print("Please choose version from menu")
+
+
+            def field_of_miracles():
+                count = 0
+                print('Welcome to field_of_miracles')
+                answer = input("What is the highest mountain in the world?\na)Everest\tb)Hoverla\nc)Elbrus\td)Anconghaua"
+                               "\nPlease write just letter")
+                if answer == "a":
+                    count += 1
+                    print("You're right")
+                else:
+                    print("Unfortunately, no, the answer is Everest")
+                answer = input("how many years does it take to watch all videos on YouTube?\na)100\tb)1000\nc)200\td)500"
+                               "\nPlease write just letter")
+                if answer == "b":
+                    count += 1
+                    print("You're right")
+                else:
+                    print("Unfortunately, no, the answer is 1000")
+                answer = input("How many on average questions does a 4-year-old child ask per day?\na)40\tb)100\nc)200"
+                               "\td)400\nPlease write just letter")
+                if answer == "d":
+                    count += 1
+                    print("You're right")
+                else:
+                    print("Unfortunately, no, the answer is 400")
+                answer = input("what is the strongest muscle in the human body?\na)biceps\tb)triceps\nc)tongue\td)calf"
+                               "\nPlease write just letter")
+                if answer == "c":
+                    count += 1
+                    print("You're right")
+                else:
+                    print("Unfortunately, no, the answer is tongue")
+                answer = input("What is the best-selling product in the world\n?a)ruby cube\tb)iphone\nc)charging"
+                               "\td)refrigerator\nPlease write just letter")
+                if answer == "a":
+                    count += 1
+                    print("You're right")
+                else:
+                    print("Unfortunately, no, the answer is ruby cube")
+                print("Congratulations, you scored ", count, "out of 5 points\nIf you want to improve the result, "
+                                                             "you can read interesting facts\n")
+
+
+            chosse_game = input("Which game you choose?\n\tGuess the number\n\tRock-paper-scissors\n\tField of miracles"
+                                "\nFor exit write: Exite")
+            if chosse_game == "Guess the number":
+                guess_the_number()
+            elif chosse_game == "Rock-paper-scissors":
+                rock_paper_scissors()
+            elif chosse_game == "Field of miracles":
+                field_of_miracles()
+            else:
+                print("Please choose version from menu")
+
+
     answer = input("Welcome to entertaining chatbot\nHow do you want have fun?\n\t1)Choose film\n\t2)Choose music\n\t"
                    "3)Choose play game\n\t4)Read anecdote\n\t5)Read interesting fact\n\t6)Play games\n\t7)Exit from bot"
                    "\n\tPlease write here:\n")
@@ -162,9 +274,3 @@ while True:
         break
     else:
         print("Please choose version from menu")
-
-    def play_games():
-        pass
-
-
-
